@@ -1,0 +1,413 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  background-color: #e6ecf0
+  font-family: "Helvetica Neue" "Helvetica", Arial, Sans-serif
+  text-rendering: optimizeLegibility !important
+  -webkit-font-smoothing: antialiased !important
+
+input,
+button
+  outline: 0
+
+.content
+  max-width: 1180px
+  margin: 0 auto
+  padding: 0 30px
+
+#main-header
+  height: 46px
+  background: #fff
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25)
+  position: relative
+  z-index: 1
+
+  .content
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 100%
+
+  nav ul
+    display: flex
+    list-style: none
+
+    li
+      display: flex
+      align-items: center
+
+      font-size: 13px
+      color: #667580
+      font-weight: bold
+
+      margin-left: 30px
+
+      &:first-child
+        margin: 0
+
+      img
+        margin-right: 7px
+
+  .side
+    display: flex
+
+    input
+      background: #f5f8fa
+      border: 1px solid #e6ecf0
+      height: 34px
+      padding: 0 30px 0 12px
+      border-radius: 16px
+      color: #667581
+      font-size: 12px
+      background: url("../img/busca.svg") no-repeat 190px center
+      width: 220px
+
+    img
+      height: 34px
+      width: 34px
+      border-radius: 50%
+      margin: 0 15px
+
+    button
+      height: 34px
+      background: #3bb9e3
+
+      display: flex
+      justify-content: center
+      align-items: center
+
+      width: 90px
+      font-weight: bold
+      font-size: 14px
+      color: #fff
+      border: 0
+      border-radius: 16px
+
+.banner
+  height: 380px
+  width: 100%
+  background: #3bb9e3
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+  color: #fff
+
+.bar
+  height: 59px
+  background: #fff
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25)
+
+  .content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-left: 285px
+    height: 100%
+
+    ul
+      display: flex
+      list-style: none
+      height: 100%
+
+      li
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding: 0 15px
+        margin: 0 15px
+        position: relative
+
+        &.active::after
+          content: ""
+          height: 2px
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 100%
+          background: #3bb9e3
+
+        span
+          color: #667580
+          font-size: 12px
+          font-weight: bold
+
+        strong
+          color: #667580
+          font-size: 18px
+          font-weight: bold
+          margin-top: 2px
+
+        &.active strong
+          color: #3bb9e3
+
+    .actions
+      display: flex
+
+      button
+        height: 34px
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        width: 90px
+        font-weight: bold
+        font-size: 14px
+        color: #3bb9e3
+        border: 1px solid #3bb9e3
+        border-radius: 16px
+
+        margin-right: 20px
+
+.wrapper-content
+  display: flex
+
+  aside.profile
+    width: 280px
+    margin-top: -130px
+    margin-left: 30px
+
+    img.avatar
+      width: 200px
+      height: 200px
+
+    .imagem
+      width: 200px
+
+    h1
+      font-size: 21px
+      color: #1f2226
+      margin-top: 10px
+
+    span
+      font-size: 14px
+      color: #1f2226
+
+    p
+      font-size: 14px
+      color: #1f2226
+      margin-top: 15px
+
+    ul
+      list-style: none
+      margin-top: 20px
+
+      li
+        font-size: 14px
+        color: #657786
+
+        display: flex
+        align-items: center
+        margin-top: 5px
+
+        &:first-child
+          margin: 0
+
+        img
+          margin-right: 10px
+
+    .widget
+      margin-top: 20px
+
+      strong
+        font-weight: normal
+        color: #3bb9e3
+        font-size: 14px
+        display: flex
+        align-items: center
+
+        img
+          margin-right: 5px
+
+    .followers ul
+      list-style: none
+      display: flex
+      flex-wrap: wrap
+
+      li
+        width: 50px
+        height: 50px
+        background: #d0d5d9
+        border-radius: 50%
+        margin: 0 5px 10px 10px
+
+    .images ul
+      list-style: none
+      display: flex
+      flex-wrap: wrap
+
+      li
+        width: 83px
+        height: 83px
+        background: #d0d5d9
+        border-radius: 8%
+        flex: 1 0 auto
+        margin: 0 5px 5px 10px
+
+  .timeline
+    flex: 1
+    background: #fff
+    margin: 10px 20px 0
+
+    nav
+      border-bottom: 1px solid #e6ecf0
+      padding: 10px 15px
+
+      a
+        text-decoration: none
+        color: #3bb9e3
+        font-size: 18px
+        font-weight: bold
+        margin-left: 20px
+
+        &:first-child
+          margin: 0
+
+        &.active
+          color: #1f2226
+
+    ul.tweets
+      list-style: none
+
+      li
+        border-bottom: 1px solid #e6ecf0
+        padding: 10px 15px
+        display: flex
+
+        > img
+          width: 48px
+          height: 48px
+
+        .info
+          margin-left: 10px
+          display: flex
+          flex-direction: column
+
+          strong
+            font-size: 14px
+            color: #1f2326
+
+            span
+              font-size: 13px
+              color: #1f2326
+              font-weight: normal
+
+          p
+            font-size: 14px
+            color: #1f2326
+            margin-top: 5px
+
+        .actions
+          display: flex
+          margin-top: 20px
+
+          a
+            display: flex
+            align-items: center
+            text-decoration: none
+            color: #667580
+            font-weight: bold
+            font-size: 12px
+            margin-left: 30px
+
+            &:first-child
+              margin-left: 0
+
+            img
+              margin-right: 5px
+
+  aside.widgets
+    width: 320px
+    margin-top: 10px
+
+    .widget
+      background: #fff
+      padding: 15px
+
+      .title
+        display: flex
+        align-items: baseline
+
+        strong
+          font-size: 18px
+          color: #1f2226
+
+        a
+          color: #3bb9e3
+          font-size: 12px
+          text-decoration: none
+          padding-left: 10px
+
+          &::before
+            content: ""
+            width: 2px
+            height: 2px
+            border-radius: 50%
+            background: #222
+            position: absolute
+            left: 4px
+            top: 6px
+
+    .follow ul
+      list-style: none
+      margin-top: 10px
+
+      li
+        display: flex
+        justify-content: space-between
+        border-bottom: 1px solid #ccd6dd
+        padding-bottom: 10px
+        margin-bottom: 10px
+
+        &:last-child
+          margin-bottom: 0
+          padding-bottom: 0
+          border: 0
+
+        .profile
+          display: flex
+          align-items: center
+
+          img
+            width: 48px
+            height: 48px
+
+          .info
+            margin-left: 10px
+            display: flex
+            flex-direction: column
+
+            strong
+              font-size: 14px
+              color: #1f2326
+
+              span
+                font-weight: normal
+                color: #9a9a9a
+
+            button
+              height: 27px
+
+              display: flex
+              justify-content: center
+              align-items: center
+
+              width: 90px
+              font-weight: bold
+              font-size: 14px
+              color: #3bb9e3
+              border: 1px solid #3bb9e3
+              border-radius: 16px
+
+              margin-top: 4px
+
+        > a
+          color: #ccd6dd
+          text-decoration: none
+          font-size: 14px
